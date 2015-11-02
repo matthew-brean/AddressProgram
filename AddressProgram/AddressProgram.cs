@@ -42,8 +42,19 @@ namespace AddressProgram
             city = this.txtCity.Text;
             province = this.txtProvince.Text;
             postalCode = this.txtPostalCode.Text;
+            
 
-            AddressListing(aptNumber, streetAddress, city, province, postalCode);
+            if (aptNumber == "")
+            {
+                AddressListing(streetAddress, city, province, postalCode);
+            }
+            else
+            {
+                AddressListing(aptNumber, streetAddress, city,
+province, postalCode);
+            }
+
+
 
         }
     }
